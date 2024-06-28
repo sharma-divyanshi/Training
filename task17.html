@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.container{
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    align-items: start;
+
+}
+.rightside{
+    position: relative;    
+}
+.rightside>img{
+    border-radius: 2mm;
+}
+.rightside>button{
+         position: absolute;
+         bottom: 5px;
+         right: 5px;
+         background-color: rgb(71, 71, 71);
+         color: white;
+         border-radius: 1mm;
+}
+.leftside{
+    color: white;
+}
+.leftside h2{
+    margin: 0px;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <a href="https://www.youtube.com/watch?v=tVzUXW6siu0&list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w"></a>
+    </div>
+
+<script >
+        let main=document.querySelector(".main");
+function view(v){
+      if(v%1000000==0){
+        return `${v/1000000}M`
+      }
+      else if(v%1000==0){
+        return `${v/1000}K`;
+      }
+      else{
+        return v;
+      }
+}     
+
+function createcard(title,Cname,views, monthsOld,duration, thumbnail,video){ 
+     let v=view(views);
+     let container=document.createElement('div');
+     container.className="container";
+     main.append(container);
+     let div1=document.createElement('div');
+      div1.innerHTML= ` <a href="${video}">
+            <img src="${thumbnail}" alt="image"
+         width="250px" > </a>`
+      div1.className="rightside";
+      container.append(div1);
+      let duro=document.createElement('button');
+      duro.innerText=`${duration}`;
+      div1.append(duro);
+      let div2=document.createElement('div');
+      div2.className="leftside";
+      container.append(div2);
+      // let sdiv1=document.createElement('div');
+      div2.innerHTML=` <h2>${title}</h2><p>${Cname}.${v}views.${monthsOld}months ago</p>`;
+    
+
+
+}
+createcard("Dekhan Tenu | Mr. & Mrs. Mahi| RajKumar Rao, Janhvi Kapoor", "Sony Music India", 68000000, 1, "3:11", "https://i.ytimg.com/vi/rMfugUZD2dA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAmKXOheM0bbbpBQaIU9NBsd0O1Lg","https://www.youtube.com/watch?v=rMfugUZD2dA")
+createcard("HAYE JULIET: DILJIT DOSANJH | JAANI | NEERU BAJWA |LATEST PUNJABI SONGS 2024 |NEW PUNJABI SONGS 2024", "Speed Records", 44000000, 3, "3:09", "https://i.ytimg.com/vi/Dulnr8YvJW8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDNKHkAaa-ho-pzIg4iy3cayBJA_w","https://www.youtube.com/watch?v=Dulnr8YvJW8")
+
+    </script>
+   
+
+</body>
+</html>
