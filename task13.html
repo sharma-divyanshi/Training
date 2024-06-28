@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faulty Calculator</title>
+</head>
+<body>
+    <script>
+        let a=prompt("enter your first operation")
+let b=prompt("enter your second operation")
+let operator=prompt("Enter operation to be perfomed")
+
+let random=Math.random();
+
+let addition=a+b;
+let subtraction=a-b;
+let multiplication=a*b;
+let division=a/b;
+
+if(random<0.1){
+    if(operator=='+'){
+        console.log("The result is:", subtraction)
+    }
+    if(operator=='-'){
+        console.log("The result is:", division)
+    }
+    if(operator=='*'){
+        console.log("The result is:", addition)
+    }
+    if(operator=='/'){
+        console.log("The result is:", multiplication)
+    }
+}
+
+else{
+    if(operator=='+'){
+        console.log("The result is:", addition)
+        
+    }
+    if(operator=='-'){
+        console.log("The result is:", subtraction)
+        
+    }
+    if(operator=='*'){
+        console.log("The result is:", multiplication)
+        
+    }
+    if(operator=='/'){
+        console.log("The result is:", division)
+
+    }
+}
+    </script>
+</body>
+</html>
