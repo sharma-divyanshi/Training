@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container red hello" style="color:red">
+        <div class="box">hey i am box</div>
+        <div class="box">hello i am also a box</div>
+    </div>
+    <script>
+        // let sel=document.querySelector(".container");
+// console.log(sel.tagName)
+// console.log(sel.nodeName)
+// console.log(sel.innerHTML)
+// console.log(sel.innerText)
+// console.log(sel.outerHTML)
+// console.log(sel.textContent)
+// // sel.hidden=true;
+
+// // *********ATTRIBUTES***********
+// console.log(sel.hasAttribute("style"))
+// console.log(sel.getAttribute("style"));
+// sel.setAttribute("style" , "background-color:yellow")
+// console.log(sel);
+
+// sel.setAttribute("data-createdby","divi");//custom attribute
+// console.log(sel);
+
+// // ***********APPEND**********
+// let newele=document.createElement("div");
+// newele.className="nya_dabba";
+// newele.innerHTML="<b> hi i am naya dabba </b>"
+// sel.append(newele)  
+// sel.prepend(newele);
+// sel.before(newele)
+// sel.after(newele)
+// sel.replaceWith(newele)
+
+// **********INSERTION******
+
+// let clas=document.querySelector(".container")  // it will not run with getelement by class
+// clas.insertAdjacentHTML("afterend","<b> I am a good boy </b>")
+// clas.insertAdjacentText("beforebegin","<b> I am a good boy </b>")
+// let rem=clas.insertAdjacentText("beforeend","<div> hi bro </div>")
+// let dabba=document.getElementsByClassName("box");
+// dabba[1].remove();
+
+// // ********DESSIGN MODE********
+// document.designMode="on";
+
+// ************CLASS NAME AND CLASS LIST************
+
+let cont=document.querySelector(".container");
+console.log(cont.classList);
+console.log(cont.className);
+cont.classList.add("daabba");
+console.log(cont.className);
+cont.classList.remove("hello");
+console.log(cont.className);
+console.log(cont.toggleAttribute("red"));
+console.log(cont.toggleAttribute("red"));
+console.log(cont.toggleAttribute("red"));
+    </script>
+</body>
+</html>
