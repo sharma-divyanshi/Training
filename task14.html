@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            padding: 40px;
+            background-color: yellow;
+        }
+        .subcont{
+            padding: 40px;
+            background-color: rgb(207, 207, 121);
+        }
+        .sscont{
+            padding: 40px;
+            background-color: rgb(246, 246, 193);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="subcont">
+            <div class="sscont"></div>
+        </div>
+    </div>
+    <script>
+        
+let cont1=document.querySelector(".container")
+let cont2=document.querySelector(".subcont")
+let cont3=document.querySelector(".sscont")
+// **********EVENT HANDLER************
+// cont1.onclick=()=>{
+//       alert("bhago bhai");
+// }
+// cont3.onclick=(e)=>{
+//       e.stopPropagation()
+//       alert("bhago");
+// }
+
+// ************EVENT LISTENER**************
+// console.log(cont2)
+// cont1.addEventListener('click',()=>{
+//     alert("cont1")
+  
+// })
+// cont2.addEventListener('click',()=>{
+//     alert("cont2")
+   
+// })
+// cont3.addEventListener('mouseover',(e)=>{
+//     e.stopPropagation()
+//     alert("cont3")
+   
+// })
+
+// ***********EVENT OBJECT************
+cont3.onclick=(e)=>{
+          e.stopPropagation()
+          console.log(e.type)
+          console.log(e.target)
+          alert("bhago");
+}
+    </script>
+</body>
+</html>
