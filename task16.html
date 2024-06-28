@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 2px solid;
+            text-align: center;
+            
+            font-size: xx-large;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+    </div>
+    <script>
+        let sel=document.querySelectorAll(".box");
+Array.from(sel).forEach(e=>{
+    e.style.color=randomcolor();
+    e.style.backgroundColor=randomcolor();
+})
+
+ function randomcolor(){
+         let a=Math.ceil(Math.random()*255);
+         let b=Math.ceil(Math.random()*255);
+         let c=Math.ceil(Math.random()*255);
+         return `rgb(${a},${b},${c})`;
+         
+
+ }
+// ************using arrays*********
+ Array.from(sel).forEach(e=>{
+    e.style.color=randomcolor();
+    e.style.backgroundColor=randomcolor();
+})
+
+// *************using query selector**************
+// sel.forEach(e=>{
+//       e.style.color=randomcolor();
+//       e.style.backgroundColor=randomcolor();
+// })
+    </script>
+</body>
+</html>
