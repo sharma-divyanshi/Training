@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .items{
+            width: 80px;
+            height: 80px;
+           border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    No baddy
+    <div class="container">
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div id="hello" class="items"></div>
+    </div>
+    <script>
+        // ***********FIRST CHILD*********
+console.log(document.body.firstChild)
+console.log(document.body.lastChild)
+
+// **************CHILD NODES***********
+console.log(document.body.childNodes);
+document.body.firstElementChild.childNodes[3].style.backgroundColor="yellow";
+// ***********Elementchild************
+document.body.firstElementChild.style.backgroundColor="green";
+document.body.firstElementChild.firstElementChild.style.backgroundColor="cyan";
+// ************children**************
+console.log(document.body.children)
+console.log(document.body.children[0])
+
+// ************QUERY SELECTOR*************
+document.querySelector(".items").style.backgroundColor="yellow";
+// document.querySelectorAll(".items").style.backgroundColor="yellow";// doesnot give the result
+let sel=document.querySelectorAll(".items")
+sel[3].style.backgroundColor="pink"
+console.log(sel);
+sel.forEach(e=>{                      //not allowed
+        e.style.backgroundColor="pink"
+    })
+
+// ************ELEMENT BY CLASS***********
+
+// document.getElementsByClassName("items").style.backgroundColor="pink";//does not give result
+let clas=document.getElementsByClassName("items");
+clas[2].style.backgroundColor="pink"
+// clas.forEach(e=>{                      //not allowed
+//     e.style.backgroundColor="pink"
+// })
+
+// ***********ELEMENT BY ID**************
+document.getElementById("hello").style.backgroundColor="purple"
+ 
+// *********ELEMENT BY TAG********
+ let tag= document.getElementsByTagName("div");
+ tag[3].style.backgroundColor="red";
+    </script>
+</body>
+</html>
